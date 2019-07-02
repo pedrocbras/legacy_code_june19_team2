@@ -14,8 +14,7 @@ Bundler.require(*Rails.groups)
 module Mailboxer
   class Application < Rails::Application
     config.action_mailer.default_url_options = { host: 'ca-mailboxer.herokuapp.com' }
-
-    config.generators do |generate|
+      config.generators do |generate|
       generate.helper false
       generate.assets false
       generate.view_specs false

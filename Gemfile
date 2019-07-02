@@ -16,13 +16,15 @@ gem 'sass-rails', '~> 5.0'
 gem 'turbolinks'
 gem 'uglifier', '>= 1.3.0'
 
-group :development,:test do
-  gem 'cucumber-rails', require: false
-  gem 'database_cleaner'
+group :development, :test do
   gem 'pry-byebug'
+  gem 'rspec-rails'
+  gem 'shoulda-matchers'
+end
+
+group :development do
   gem 'spring'
   gem 'web-console', '~> 2.0'
-  gem 'rspec-rails'
 end
 
 group :production do
