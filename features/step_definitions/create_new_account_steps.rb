@@ -6,12 +6,12 @@ Given("I visit the site") do
     expect(page).to have_content "Sign up"
   end
 
-  When("I click  {string} link") do |signup|
-    click_on(signup)
+  When("I click  {string} link") do |button|
+    click_on(button)
   end
   
-  Then("I fill in {string} with {string}") do |string, string2|
-    pending # Write code here that turns the phrase above into concrete actions
+  Then("I fill in {string} with {string}") do |field, content|
+    fill_in(field, :with => content)
   end
   
   Then("I click {string}") do |string|
