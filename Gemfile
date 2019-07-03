@@ -18,6 +18,7 @@ gem 'uglifier', '>= 1.3.0'
 
 group :development, :test do
   gem 'cucumber-rails', require: false
+  gem 'factory_bot_rails'
   gem 'database_cleaner'
   gem 'pry-byebug'
   gem 'rspec-rails'
