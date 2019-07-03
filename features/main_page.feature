@@ -6,5 +6,5 @@ Feature: See Craft Academy mailboxer & buttons on landing page
   Scenario: View Craft Academy Mailboxer
     When I visit the site
     Then I should see "Craft Academy Mailboxer"
-    And I should see "Log In button"
-    And I should see "Sign Up button"
+    And I should see "Login"
+    And I should see "Sign up"
