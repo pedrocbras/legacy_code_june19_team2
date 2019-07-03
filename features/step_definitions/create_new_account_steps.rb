@@ -14,7 +14,6 @@ Given("I visit the site") do
     fill_in(field, :with => content)
   end
   
-  Then("I click {string}") do |string|
-    pending # Write code here that turns the phrase above into concrete actions
+  Then("I click {string}") do |button|
+    click_on(button)
   end
-  
