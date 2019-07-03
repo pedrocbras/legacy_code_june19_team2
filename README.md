@@ -17,41 +17,37 @@ https://www.pivotaltracker.com/n/projects/2360713
 
 #USER
 
-As user 
+As a user 
 In order to interact with the app
 I should see the webpage
 
-As user
+As a user
 In order to use the app
 I must be able to create an account
 
-As user
-When the first time i log in 
-Mailbox should be empty 
+As a user
+In order when user creates new account
+I will see an empty Mailbox
 
 As a signed up user
 In order to acces my account
 I need to be able to sign in
 
 As a user 
-To be able to sign up
-User must have a valid email
+In order to sign up for the app
+I nee to have a valid email
 
 As a user 
-To be able to sign in
+In order to sign in
 I must have a password
 
 As a user 
-If im easily forgetting
-It should be a remember me function 
-
-As user 
-When i log in 
-I should see greeting page
+In case of forgetting password
+I should have a remember me function 
 
 As a user 
-when i log in to my account
-I should see my inbox 
+In terms of welcome to the app 
+I should see greeting page
 
 As a user 
 In order to send out an email
