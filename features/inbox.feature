@@ -5,8 +5,8 @@ Feature: Have a working Inbox
 
   Scenario: View Inbox when User Logs In
     When I log in to my account
-    And I should see "Inbox"
-    And I should see "Compose"
+    And I should see "Inbox" that contains received messages
+    And I should see "Compose" button to send messages
 
   Scenario: Send Messages to another user
     When I click on "Compose" in my Inbox
