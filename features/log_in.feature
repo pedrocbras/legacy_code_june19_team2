@@ -13,4 +13,4 @@ Scenario: If user wants to log in
     Then I fill in "Email" with "john@doe.com"
     And I fill in "Password" with "password1"
     And I click "Log in"
-    Then i should see "Signed in successfully."
+    Then I should see "Signed in successfully."
