@@ -33,6 +33,10 @@ When("I click on {string} in my Inbox") do |button|
 end
 
 Then("I should see {string} and {string} and {string}") do |string, string2, string3|
-  expect(page).to have_content string, string2, string3
+  expect(page).to have_content string
+end
+
+Then("I select a user from the {string} box") do |string|
+  select 'Hackerman', from: 'conversation[recipients][]'
 end
 

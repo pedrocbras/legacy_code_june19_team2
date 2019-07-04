@@ -26,8 +26,9 @@ Background:
     Then I should see a "Compose" button and "Inbox" and "Sent" and "Trash"
     When I click on "Compose" in my Inbox
     Then I should see "Recipients" and "Subject" and "Message"
-    And I enter "Bob" into the "Recipients" field
+    And I select a user from the "Recipient" box
     And I enter "Hello!" into the "Subject" field
-    And I enter "This is a test message" into the "Message" field
+    And I enter "This is a test message" into the "conversation[body]" field
     And I click on "Send Message" button
     Then I should see "Your message was successfully sent!"
+    
