@@ -26,8 +26,4 @@ Scenario: User cant login with invalid password
     When I fill in "Email" with "john@doe.com"
     And I fill in "Password" with ""
     And I click "Log in"
-    Then I should see "Invalid Email or password"
-
-
-
-  
+    Then I should see "Invalid Email or password" 
