@@ -1,9 +1,9 @@
 Given("I am logged into my account") do
-  pending # Write code here that turns the phrase above into concrete actions
+  visit root_path
 end
 
-Given("I click on the {string} button") do |string|
-  pending # Write code here that turns the phrase above into concrete actions
+Given("I click on the {string} button") do |inbox|
+  click_(inbox)
 end
 
 Then("I should see a {string} and {string} and {string} and {string}") do |string, string2, string3, string4|
