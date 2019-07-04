@@ -5,11 +5,11 @@ Given("the following user exists") do |table|
   end 
 
   Given("I visit the site") do
-    pending # Write code here that turns the phrase above into concrete actions
+    visit root_path
   end
   
-  Then("I should see {string}") do |string|
-    pending # Write code here that turns the phrase above into concrete actions
+  Then("I should see {string}") do |button|
+    expect(page).to have_content(button)
   end
   
   When("I click {string}") do |string|
