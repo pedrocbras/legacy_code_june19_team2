@@ -3,11 +3,13 @@ Feature: Have a working Inbox
     In order to read & send messages
     I should have an inbox that receives and sends messages
 
-  Scenario: View Inbox when User Logs In
+Background: 
     Given the following user exists
         | email              |  password  | name       |
         | hackerman@gmail.com|  hackerman |  Hackerman |
-    Given I visit the site
+    And I visit the site
+
+  Scenario: View Inbox when User Logs In
     When I click "Login"
     And I enter "hackerman@gmail.com" into the "Email" field
     And I enter "hackerman" into the "Password" field
