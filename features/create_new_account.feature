@@ -1,4 +1,3 @@
-# test 
 Feature: Creating new user
   As a User,
   When I visit the landing page of the application

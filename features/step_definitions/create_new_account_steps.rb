@@ -11,7 +11,7 @@ Given("I visit the site") do
   end
   
   Then("I fill in {string} with {string}") do |field, content|
-    fill_in(field, :with => content)
+    fill_in(field, with: content)
   end
   
   Then("I click {string}") do |button|
