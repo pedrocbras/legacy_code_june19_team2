@@ -1,8 +1,8 @@
 Given("the following user exists") do |table|
-    table.hashes.each do |table|
-        FactoryBot.create(:user, table)
-      end
+  table.hashes.each do |user|        
+       FactoryBot.create(:user, user)
     end
+  end
 
   Given("I visit the site") do
     visit(root_path)

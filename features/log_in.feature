@@ -1,7 +1,7 @@
 Feature: User can login
-    As a user,
-    When I enter my account
-    I need be able to log in
+    As a user 
+    In order to access my account
+    I would like to be able to log in
 
 Background:
     Given the following user exists
