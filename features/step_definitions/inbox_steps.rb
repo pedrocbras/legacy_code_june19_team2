@@ -16,18 +16,14 @@ When("I click {string}") do |button|
   click_on button
 end
 
-When("I enter {string} into the {string} field") do |string, string2|
-  pending # Write code here that turns the phrase above into concrete actions
+When("I enter {string} into the {string} field") do |input, field|
+  fill_in field, with: input
 end
 
-Then("I click on {string} button") do |string|
-  pending # Write code here that turns the phrase above into concrete actions
+Then("I click on {string} button") do |button|
+  click_on button
 end
 
-Then("I should see a {string} and {string} and {string} and {string}") do |string, string2, string3, string4|
-  pending # Write code here that turns the phrase above into concrete actions
-end
-
-Then("I should see {string} in my inbox area") do |string|
-  pending # Write code here that turns the phrase above into concrete actions
+Then("I should see a {string} button and {string} and {string} and {string}") do |element1, element2, element3, element4|
+  expect(page).to have_content element1
 end

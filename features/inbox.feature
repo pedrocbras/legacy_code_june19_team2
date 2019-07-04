@@ -17,8 +17,7 @@ Background:
     And I click "Log in"
     Then I should see "Signed in successfully."
     And I click on "Inbox" button
-    Then I should see a "Compose Button" and "Inbox" and "Sent" and "Trash"
-    And I should see "No messages yet" in my inbox area
+    Then I should see a "Compose" button and "Inbox" and "Sent" and "Trash"
     
 
   # Scenario: Send Messages to another user
