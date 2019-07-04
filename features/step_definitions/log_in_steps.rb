@@ -12,15 +12,15 @@ Given("the following user exists") do |table|
     expect(page).to have_content(button)
   end
   
-  When("I click {string}") do |string|
-    pending # Write code here that turns the phrase above into concrete actions
+  When("I click {string}") do |login|
+    click_on(login)
   end
   
-  Then("I fill in {string} with {string}") do |string, string2|
-    pending # Write code here that turns the phrase above into concrete actions
+  Then("I fill in {string} with {string}") do |field, content|
+    fill_in(field, :with => content)
   end
   
-  Then("I click {string}") do |string|
+  Then("I click on {string}") do |string|
     pending # Write code here that turns the phrase above into concrete actions
   end
   
