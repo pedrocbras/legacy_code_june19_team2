@@ -4,7 +4,15 @@ Feature: Have a working Inbox
     I should have an inbox that receives and sends messages
 
   Scenario: View Inbox when User Logs In
-    Given I am logged into my account
+    Given the following user exists
+        | email              |  password  | name       |
+        | hackerman@gmail.com|  hackerman |  Hackerman |
+    Given I visit the site
+    When I click "Login"
+    And I enter "hackerman@gmail.com" into the "Email" field
+    And I enter "hackerman" into the "Password" field
+    And I click "Log in"
+    Then I should see "Signed in successfully."
     And I click on "Inbox" button
     Then I should see a "Compose Button" and "Inbox" and "Sent" and "Trash"
     And I should see "No messages yet" in my inbox area
