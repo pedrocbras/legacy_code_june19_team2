@@ -20,11 +20,11 @@ Given("the following user exists") do |table|
     fill_in(field, :with => content)
   end
   
-  Then("I click on {string}") do |string|
-    pending # Write code here that turns the phrase above into concrete actions
+  Then("I click on {string}") do |log_in|
+    click_on(log_in)
   end
   
-  Then("i should see {string}") do |string|
-    pending # Write code here that turns the phrase above into concrete actions
+  Then("i should see {string}") do |success|
+    expect(page).to have_content(success)
   end
   
