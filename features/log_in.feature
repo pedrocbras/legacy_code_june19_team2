@@ -4,10 +4,10 @@ Feature: User can login
     I need be able to log in
 
 Background:
-Given the following user exists
-      | email        | password   | name |
-      | john@doe.com | password1  | John |
-And I visit the site
+    Given the following user exists
+    | email        | password   | name |
+    | john@doe.com | password1  | John |
+    And I visit the site
 
 Scenario: User can login successfully
     When I click "Login"
@@ -16,7 +16,7 @@ Scenario: User can login successfully
     And I click "Log in"
     Then I should see "Signed in successfully."
 
-Scenario: User can login with invalid credentials [Sad Path]
+Scenario: User cant login with invalid credentials [Sad Path]
     When I click "Login"
     When I fill in "Email" with "hoedoe"
     And I fill in "Password" with "laputamadre"
@@ -28,7 +28,7 @@ Scenario: User can login with invalid credentials [Sad Path]
     Then I should see "Invalid Email or password"
 
 
-Scenario: User can login with invalid credentials [Sad Path]
+Scenario: User cant login without valid credentials [Sad Path]
     When I click "Login" 
     And I click "Log in"
     Then I should see "Invalid Email or password."
