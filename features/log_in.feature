@@ -8,42 +8,26 @@ Background:
     | email        | password   | name |
     | john@doe.com | password1  | John |
     And I visit the site
+    And I click "Login"
 
 Scenario: User can login successfully
-    When I click "Login"
     When I fill in "Email" with "john@doe.com"
     And I fill in "Password" with "password1"
     And I click "Log in"
     Then I should see "Signed in successfully."
 
-Scenario: User cant login with invalid credentials [Sad Path]
-    When I click "Login"
+Scenario: User cant login with invalid Email [Sad Path]
     When I fill in "Email" with "hoedoe"
-    And I fill in "Password" with "laputamadre"
+    And I fill in "Password" with "password1"
     And I click "Log in"
     Then I should see "Invalid Email or password"
-    Then I fill in "Email" with ""
+    
+Scenario: User cant login with invalid password
+    When I fill in "Email" with "john@doe.com"
     And I fill in "Password" with ""
     And I click "Log in"
     Then I should see "Invalid Email or password"
 
 
-Scenario: User cant login without valid credentials [Sad Path]
-    When I click "Login" 
-    And I click "Log in"
-    Then I should see "Invalid Email or password."
-    When I fill in "Email" with ""
-    And I click "Log in"
-    Then I should see "Invalid Email or password."
-    When I fill in "Password" with ""
-    And I click "Log in"
-    Then I should see "Invalid Email or password."
-  
-Scenario: User cant login with wrong password [Sad Path]
-    When I click "Login"
-    And I fill in "Email" with "johndoe@gmail.com"
-    When I fill in "Password" with "wrong_password"
-    And I click "Log in"
-    Then I should see "Invalid Email or password."
 
   
