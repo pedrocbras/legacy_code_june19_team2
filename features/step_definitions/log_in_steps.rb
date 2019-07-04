@@ -1,8 +1,9 @@
 Given("the following user exists") do |table|
-    # table is a Cucumber::MultilineArgument::DataTable
-    pending # Write code here that turns the phrase above into concrete actions
-  end
-  
+    table.hashes.each do |table|
+      User.create(table)
+    end
+  end 
+
   Given("I visit the site") do
     pending # Write code here that turns the phrase above into concrete actions
   end
