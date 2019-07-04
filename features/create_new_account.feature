@@ -33,15 +33,18 @@ Feature: Creating new user
     And I fill "Password confirmation" with "password1"
     And I click "Create"
     Then I should see "Email is invalid"
-    When I click "Sign up"
-    And I fill "Name" with "John Doe"
+    
+
+  Scenario: Not possible to create new account when invalid password is given
+    When I fill "Name" with "John Doe"
     And I fill "Email" with "john@doe.com"
     And I fill "Password" with "pass"
     And I fill "Password confirmation" with "pass"
     And I click "Create"
     Then I should see "Password is too short (minimum is 8 characters)"
-    When I click "Sign up"
-    And I fill "Name" with "John Doe"
+
+  Scenario: Not possible to create new account when password does not match
+    When I fill "Name" with "John Doe"
     And I fill "Email" with "john@doe.com"
     And I fill "Password" with "password1"
     And I fill "Password confirmation" with "password2"
