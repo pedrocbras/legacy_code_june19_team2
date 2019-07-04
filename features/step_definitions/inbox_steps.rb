@@ -27,3 +27,12 @@ end
 Then("I should see a {string} button and {string} and {string} and {string}") do |element1, element2, element3, element4|
   expect(page).to have_content element1
 end
+
+When("I click on {string} in my Inbox") do |button|
+  click_on button
+end
+
+Then("I should see {string} and {string} and {string}") do |string, string2, string3|
+  expect(page).to have_content string, string2, string3
+end
+
