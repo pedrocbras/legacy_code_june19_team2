@@ -3,11 +3,13 @@ Feature: Check for a valid email
     When I enter my account
     I need be able to log in
 
-Scenario: If user wants to log in
-    Given the following user exists
+Background:
+Given the following user exists
       | email        | password   | name |
       | john@doe.com | password1  | John |
-    Given I visit the site
+Given I visit the site
+
+Scenario: If user wants to log in
     Then I should see "Login"
     When I click "Login"
     Then I fill in "Email" with "john@doe.com"

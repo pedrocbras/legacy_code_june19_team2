@@ -1,8 +1,8 @@
 Given("the following user exists") do |table|
     table.hashes.each do |table|
-      User.create(table)
+        FactoryBot.create(:user, table)
+      end
     end
-  end 
 
   Given("I visit the site") do
     visit(root_path)
@@ -12,19 +12,15 @@ Given("the following user exists") do |table|
     expect(page).to have_content(button)
   end
   
-  When("I click {string}") do |button|
-    click_on(button)
+  When("I click {string}") do |element|
+    click_on(element)
   end
   
-  Then("I fill in {string} with {string}") do |field, content|
-    fill_in(field, :with => content)
+  Then("I fill in {string} with {string}") do |field, input|
+    fill_in field, with: input
   end
   
-  Then("I click on {string}") do |button|
-    click_on(button)
-  end
-  
-  Then("i should see {string}") do |message|
-    expect(page).to have_content(message)
+  Then("i should see {string}") do |content|
+    expect(page).to have_content(content)
   end
   
