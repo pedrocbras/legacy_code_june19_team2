@@ -4,9 +4,10 @@ Feature: Have a working Inbox
     I should have an inbox that receives and sends messages
 
   Scenario: View Inbox when User Logs In
-    When I log in to my account
-    And I should see "Inbox" that contains received messages
-    And I should see "Compose" button to send messages
+    Given I am logged into my account
+    And I click on the "Inbox" button
+    Then I should see a "Compose Button" and "Inbox" and "Sent" and "Trash"
+    And I should see "No messages yet" in my inbox area
 
   Scenario: Send Messages to another user
     When I click on "Compose" in my Inbox

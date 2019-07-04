@@ -1,12 +1,16 @@
-When("I log in to my account") do
+Given("I am logged into my account") do
   pending # Write code here that turns the phrase above into concrete actions
 end
 
-When("I should see {string} that contains received messages") do |string|
+Given("I click on the {string} button") do |string|
   pending # Write code here that turns the phrase above into concrete actions
 end
 
-When("I should see {string} button to send messages") do |string|
+Then("I should see a {string} and {string} and {string} and {string}") do |string, string2, string3, string4|
+  pending # Write code here that turns the phrase above into concrete actions
+end
+
+Then("I should see {string} in my inbox area") do |string|
   pending # Write code here that turns the phrase above into concrete actions
 end
 
