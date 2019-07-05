@@ -15,7 +15,7 @@ Background:
     When I click "Inbox"
     When I click "Compose"
     When I select "Recipient" named "LonelyGal"
-    And I enter "Hello!" into the "Subject" field
+    And I enter "Hello!" into the "conversation[subject]" field
     And I enter "This is a test message" into the "conversation[body]" field
     When I click "Send Message"
     Then I should see "Your message was successfully sent!"
