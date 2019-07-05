@@ -9,12 +9,8 @@ Given("I visit the site") do
 end
 
 Given(/^I am logged in as "([^"]*)"$/) do |name|
-      user = User.find_by(name: name)
-      login_as(user, scope: :user)
-    end
-
-Then("I should see {string}") do |content|
-  expect(page).to have_content content
+  user = User.find_by(name: name)
+  login_as(user, scope: :user)
 end
 
 When("I click {string}") do |button|
@@ -25,11 +21,8 @@ When("I enter {string} into the {string} field") do |input, field|
   fill_in field, with: input
 end
 
-Then("I should see {string} and {string} and {string}") do |string, string2, string3|
-  expect(page).to have_content string
-end
 
-Then("I select a user from the {string} box") do |string|
-  select 'LonelyGal', from: 'conversation[recipients][]'
+When("I select {string} named {string}") do |field, recipient|
+  select recipient, from: field
 end
 

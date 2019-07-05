@@ -13,10 +13,8 @@ Background:
 
   Scenario: Send Messages to another user
     When I click "Inbox"
-    Then I should see "Compose"
     When I click "Compose"
-    Then I should see "Recipients" and "Subject" and "Message"
-    And I select a user from the "Recipient" box
+    When I select "Recipient" named "LonelyGal"
     And I enter "Hello!" into the "Subject" field
     And I enter "This is a test message" into the "conversation[body]" field
     When I click "Send Message"
