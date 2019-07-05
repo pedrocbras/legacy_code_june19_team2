@@ -12,7 +12,7 @@ end
 end
   
 When("I click to accept the alert message") do
-    page.driver.browser.switch_to.alert.accept
+    alert = page.driver.browser.switch_to.alert.accept
 end
 
 Given("I am on the inbox page") do 
