@@ -11,11 +11,9 @@ end
     login_as user, scope: :user
 end
   
-  Given("I am on the {string} page") do |string|
-    pending # Write code here that turns the phrase above into concrete actions
-  end
+  Given("I am on the inbox page") do 
+    visit mailbox_inbox_path
+end
   
-  Then("I should see {string} message") do |string|
-    pending # Write code here that turns the phrase above into concrete actions
-  end
+
   

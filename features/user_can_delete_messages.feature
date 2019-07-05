@@ -1,3 +1,4 @@
+@javascript
 Feature: User can delete messages
 
     As a user
@@ -15,7 +16,7 @@ Feature: User can delete messages
 
     Scenario: User can delete a message
     Given I am logged in as "Dash"
-    And I am on the "landing" page
+    And I am on the inbox page
     When I click "Inbox"
     Then I should see "1" message
     When I click "View"
