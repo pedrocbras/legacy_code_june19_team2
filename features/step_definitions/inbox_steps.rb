@@ -5,8 +5,13 @@ Given("the following user exists") do |table|
 end
 
 Given("I visit the site") do
-  visit(root_path)
+  visit root_path
 end
+
+Given(/^I am logged in as "([^"]*)"$/) do |name|
+      user = User.find_by(name: name)
+      login_as(user, scope: :user)
+    end
 
 Then("I should see {string}") do |content|
   expect(page).to have_content content
@@ -20,23 +25,11 @@ When("I enter {string} into the {string} field") do |input, field|
   fill_in field, with: input
 end
 
-Then("I click on {string} button") do |button|
-  click_on button
-end
-
-Then("I should see a {string} button and {string} and {string} and {string}") do |element1, element2, element3, element4|
-  expect(page).to have_content element1
-end
-
-When("I click on {string} in my Inbox") do |button|
-  click_on button
-end
-
 Then("I should see {string} and {string} and {string}") do |string, string2, string3|
   expect(page).to have_content string
 end
 
 Then("I select a user from the {string} box") do |string|
-  select 'Hackerman', from: 'conversation[recipients][]'
+  select 'LonelyGal', from: 'conversation[recipients][]'
 end
 
