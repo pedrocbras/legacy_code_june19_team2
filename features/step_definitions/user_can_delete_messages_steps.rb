@@ -11,7 +11,11 @@ end
     login_as user, scope: :user
 end
   
-  Given("I am on the inbox page") do 
+When("I click to accept the alert message") do
+    page.driver.browser.switch_to.alert.accept
+end
+
+Given("I am on the inbox page") do 
     visit mailbox_inbox_path
 end
   
