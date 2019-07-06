@@ -19,12 +19,7 @@ Given("I am on the inbox page") do
     visit mailbox_inbox_path
 end
   
-When("I am on the {string} page") do |string|
-  pending # Write code here that turns the phrase above into concrete actions
+Then("I should have {string} message") do |string|
+  visit mailbox_inbox_path
 end
-
-Then("I should have {string} messages") do |string|
-  pending # Write code here that turns the phrase above into concrete actions
-end
-
   
