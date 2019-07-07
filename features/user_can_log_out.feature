@@ -7,11 +7,8 @@ Background:
     Given the following user exists
     | email        | password   | name |
     | john@doe.com | password1  | John |
+    And I am logged in as "John"
     And I visit the site
-    And I click "Login"
-    And I fill "Email" with "john@doe.com"
-    And I fill "Password" with "password1"
-    And I click "Log in"
 
 Scenario: User can logout successfully
     When I click "Logout"
