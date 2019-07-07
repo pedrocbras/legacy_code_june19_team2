@@ -12,7 +12,6 @@ Background:
     And I fill "Email" with "john@doe.com"
     And I fill "Password" with "password1"
     And I click "Log in"
-    Then I should see "Signed in successfully."
 
 Scenario: User can logout successfully
     When I click "Logout"
