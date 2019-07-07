@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
 
+  get 'password_resets/new'
+
+  get 'password_resets/edit'
+
   devise_for :users
   get 'welcome/index'
 
@@ -19,5 +23,7 @@ Rails.application.routes.draw do
       post :untrash
     end
   end
+
+  resources :password_resets,     only: [:new, :create, :edit, :update]
 
 end
