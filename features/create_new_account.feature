@@ -5,13 +5,13 @@ Feature: Creating new user
 
   Background:
     Given I visit the site
-    And I click "Sign up" link
+    And I click "Sign up"
 
   Scenario: Create new account
-    When I fill "Name" with "John Doe"
-    And I fill "Email" with "johndoe@gmail.com"
-    And I fill "Password" with "password1"
-    And I fill "Password confirmation" with "password1"
+    When I enter "John Doe" into the "Name" field
+    And I enter "johndoe@gmail.com" into the "Email" field
+    And I enter "password1" into the "Password" field
+    And I enter "password1" into the "Password confirmation" field
     And I click "Create"
     Then I should see "Welcome! You have signed up successfully."
 
