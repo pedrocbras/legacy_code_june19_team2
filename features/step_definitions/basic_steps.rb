@@ -1,11 +1,27 @@
 Given("the following user exists") do |table|
   table.hashes.each do |user|        
-       FactoryBot.create(:user, user)
+      FactoryBot.create(:user, user)
     end
   end
 
+Given("the following messages exist") do |table|
+  table.hashes.each do |email|
+    sender = User.find_by(name: email[:sender])
+    @receiver = User.find_by(name: email[:receiver]) 
+    sender.send_message(@receiver, email[:body], email[:subject])  
+  end
+end
+
 Given("I visit the site") do
   visit(root_path)
+end
+
+Given("I am on the inbox page") do 
+  visit mailbox_inbox_path
+end
+
+When("I click to accept the alert message") do
+  alert = page.driver.browser.switch_to.alert.accept
 end
 
 When("I click {string}") do |element|

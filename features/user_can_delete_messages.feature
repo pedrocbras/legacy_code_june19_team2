@@ -23,5 +23,5 @@ Feature: User can delete messages
         And I click "Move to trash"
         And I click to accept the alert message
         And I am on the inbox page
-        Then I should have "0" message
+        Then I should see "0" message
 
