@@ -12,7 +12,7 @@ Feature: Forgotten Password
     Scenario: If user forgets password they can request it to be recovered (happy path)
         When I click "Login"
         And I click "Forgot your password?"
-        And I should see "Forgot your password?"
+        Then I should see "Forgot your password?"
         When I fill "Email" with "john@doe.com"
         And I click "Send me reset password instructions"
         Then I should see "You will receive an email with instructions on how to reset your password in a few minutes."
